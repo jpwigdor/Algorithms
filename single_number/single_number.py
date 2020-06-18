@@ -5,9 +5,14 @@ Returns: an integer
 
 
 def single_number(arr):
-    # Your code here
+    unique_nums = []
 
-    pass
+    for num in arr:
+        if num not in unique_nums:
+            unique_nums.append(num)
+        else:
+            unique_nums.remove(num)
+    return unique_nums[0]
 
 
 if __name__ == '__main__':
